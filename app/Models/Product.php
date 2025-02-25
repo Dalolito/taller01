@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
@@ -18,7 +17,6 @@ class Product extends Model
      * $this->attributes['price'] - float - contiene el precio del producto
      * $this->attributes['stock'] - int - contiene el stock del producto
      */
-
     protected $fillable = [
         'title',
         'description',
@@ -26,7 +24,7 @@ class Product extends Model
         'image',
         'brand',
         'price',
-        'stock'
+        'stock',
     ];
 
     public function getId(): int
