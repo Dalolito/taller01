@@ -7,8 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
-    use HasFactory;
-
     /**
      * PRODUCT ATTRIBUTES
      * $this->attributes['id'] - int - contiene la clave primaria del producto
