@@ -1,0 +1,62 @@
+# Taller01 - Proyecto Laravel
+
+
+## Requisitos previos
+
+- **XAMPP**: Asegúrate de tener XAMPP instalado en tu sistema. Puedes descargarlo desde https://www.apachefriends.org/es/download.html
+- **Composer**: Asegúrate de tener Composer instalado. Si no lo tienes, sigue las instrucciones de instalación en https://getcomposer.org/ (una vez instalada debers reiniciar Visual Studio)
+
+---
+
+## Configuración del proyecto
+
+1. **Coloca el proyecto en la carpeta `htdocs` de XAMPP**:
+   - Copia la carpeta `taller01` dentro de `C:\xampp\htdocs`.
+
+2. **Instala las dependencias de Composer**:
+   - Abre una terminal o CMD y navega hasta la raíz del proyecto:
+     ```bash
+     cd C:\xampp\htdocs\taller01
+     ```
+   - Ejecuta el siguiente comando para instalar las dependencias:
+     ```bash
+     composer install
+     ```
+
+3. **Configura la base de datos**:
+   - Inicia XAMPP y activa los servicios de **Apache** y **MySQL**.
+   - Haz clic en el botón **Admin** de MySQL para abrir phpMyAdmin.
+   - En phpMyAdmin, crea una nueva base de datos llamada `taller01`.
+
+4. **Configura el archivo `.env`**:
+   - Abre el archivo `.env` y verifica que tenga los siguientes valores:
+     ```env
+     DB_CONNECTION=mysql
+     DB_HOST=127.0.0.1
+     DB_PORT=3306
+     DB_DATABASE=taller01
+     DB_USERNAME=root
+     DB_PASSWORD=
+     ```
+   - Si tu configuración de MySQL es diferente (por ejemplo, el puerto), actualiza los valores correspondientes.
+
+5. **Genera una clave de aplicación**:
+   - Ejecuta el siguiente comando para generar una clave de aplicación:
+
+     php artisan key:generate
+
+
+6. **Ejecuta las migraciones**:
+   - Ejecuta el siguiente comando para crear las tablas en la base de datos:
+
+     php artisan migrate
+
+
+7. **Inicia el servidor de desarrollo**:
+   - Ejecuta el siguiente comando para iniciar el servidor de Laravel:
+
+     php artisan serve
+
+   - Abre tu navegador y visita `http://127.0.0.1:8000` para ver el proyecto en funcionamiento.
+
+---

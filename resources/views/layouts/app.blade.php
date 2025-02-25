@@ -21,10 +21,10 @@
                         <a class="nav-link" href="{{ route('home.index') }}">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('products.addProduct') }}">agregar producto</a>
+                        <a class="nav-link" href="{{ route('product.add') }}">agregar producto</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">ver productos</a>
+                        <a class="nav-link" href="{{ route('product.list') }}">ver productos</a>
                     </li>
                 </ul>
 
